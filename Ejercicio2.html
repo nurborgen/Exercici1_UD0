@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="verForm.php" method="get">
+        <label>Nombre y apellidos:
+            <input type="text" name="name" required>
+        </label><br>
+        <label>e-mail:
+            <input type="email" name="email" required>
+        </label><br>
+        <label>Sexo:
+            <input type="radio" value="H" name="gender">Hombre
+        </label>
+        <label>Sexo:
+            <input type="radio" value="M" name="gender">Mujer
+        </label>
+        <br>
+        <label>Código postal:
+            <input type="text" name="postalCode" pattern="((0[1-9]|5[0-2])|[1-4][0-9])[0-9]{3}" required>
+        </label><br>
+        <label>Ciclo:
+            <select name="studies">
+                <option value="DAW">Desarrollo de aplicaciones web</option>
+                <option value="DAM">Desarrollo de aplicaciones multiplataforma</option>
+                <option value="ASIX">Administració de sistemes informatics en xarxa</option>
+            </select>
+        </label><br>
+        <label>Framework:
+            <input type="checkbox" name="framework[]" value="angular">Angular
+        </label>
+        <label>
+            <input type="checkbox" name="framework[]" value="vue">Vue
+        </label>
+        <label>
+            <input type="checkbox" name="framework[]" value="simfony">Simfony
+        </label>
+        <label>
+            <input type="checkbox" name="framework[]" value="laravel">Laravel
+        </label><br><br>
+        <label>
+            <input type="checkbox" name="polytics" value="on" required>Acepta las condiciones de servicio y nuesta politica de privacidad
+        </label><br>
+        <button type="submit">Guardar</button>
+    </form>
+</body>
+</html>
